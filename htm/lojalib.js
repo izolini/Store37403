@@ -833,6 +833,7 @@ function fnLoginShowUserName(user){
 }
 
 // Início suporte Don't Go Popup
+/*
 FCLib$.onReady(function(){
   if(FCLib$.GetID("overlay")){
     //Dynamic Don't Go Container
@@ -869,7 +870,7 @@ FCLib$.onReady(function(){
     FCLib$.fnDontGo(userDontGo,{
     DontGoBtnClose:FC$.PathImg +"botdontgoclose.svg?cccfc=1", //Close button
     DontGoBanner:FC$.PathImg +"popupdontgo.jpg?cccfc=1", //Banner
-    DontGoLink:"/comer-para-emagrecer-59818667", //Link
+    DontGoLink:"/acompanhamento-health-coaching-58523196", //Link
     DontGoAltParam:"CONHEÇA NOSSA CAMPANHA!"}, //Alt Param
     "DontGoCookie"); //Cookie name
   }
@@ -907,8 +908,9 @@ function fnDontGoActions() {
     return;
   }
 }
-
-document.addEventListener('DOMContentLoaded', fnDontGoActions, false);
+*/
+// Activate don't Go Window 
+//document.addEventListener('DOMContentLoaded', fnDontGoActions, false);
 
 
 function fnProgressBarLoading(){
