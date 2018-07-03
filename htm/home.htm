@@ -1,24 +1,3 @@
-<!-- Begin Script de Alerta de Entrega -->
-  <script type="text/javascript">
-    jQuery(document).ready(function(){
-      var sessao= getCookie("37403");
-      var sessaoTemp = localStorage.getItem("sessao");
-      console.log(sessao);
-      console.log(sessaoTemp);
-      if(sessao != sessaoTemp)
-        {
-          	localStorage.setItem("sessao",sessao);
-      		setTimeout('alert("ATENÇÃO\\n\\nNossos alimentos são embalados à vácuo para garantir propriedades nutricionais, aroma e sabor.\\nPor este motivo, visando manter a alta qualidade dos produtos, nossa equipe entrará em contato após sua compra para combinar data e horário exatos para entrega.\\n\\nIMPORTANTE: Entregas somente para Brasília-DF e região (CEPs 70000-000 a 73499-999).\\n\\nAsa Norte e Asa Sul\\nSudoeste e Cruzeiro\\nGuará, Águas Claras e Taguatinga\\n\\nObs: Regiões adjacentes sob consulta.")',1000);
-        }
-    });
-	function getCookie(name) {
-    	function escape(s) { return s.replace(/([.*+?\^${}()|\[\]\/\\])/g, '\\$1'); };
-    	var match = document.cookie.match(RegExp('(?:^|;\\s*)' + escape(name) + '=([^;]*)'));
-    	return match ? match[1] : null;
-	};
-  </script>
-<!-- End of Script de Alerta de Entrega -->
-
 <!-- Begin Banners -->
 <div id="FC-HideHomeBanners" style="display:none;">
   <link rel="stylesheet" href="/js/magictoolbox/magicslideshowv2/magicslideshow.css?cccfc=1" /><script src="/js/magictoolbox/magicslideshowv2/magicslideshow.js?cccfc=1"></script>
@@ -105,4 +84,41 @@
 </div>
 <!-- Fim botao conheca nossos pratos (categorias) -->
 
+<!-- Begin Script de Alerta de Entrega -->
+<script>
+function setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+    var expires = "expires="+d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
+function checkCookie() {
+    var sessao = getCookie("saudavelcomvc");
+    var sessaoTemp = localStorage.getItem("sessao");
+    console.log(sessao);
+    console.log(sessaoTemp);
+    if (sessao == "") {
+        setTimeout('alert("ATENÇÃO\\n\\nNossos alimentos são embalados à vácuo para garantir prioridades nutricionais, aroma e sabor.\\nPor este motivo, visando manter a alta qualidade dos produtos, nossa equipe entrará em contato após sua compra para combinar data e horário exatos para entrega.\\n\\nIMPORTANTE: Entregas somente para Brasília-DF e região (CEPs 70000-000 a 73499-999).\\n\\nAsa Norte e Asa Sul\\nSudoeste e Cruzeiro\\nGuará, Águas Claras e Taguatinga\\n\\nObs: Regiões adjacentes sob consulta.")',1000);
+        setCookie("saudavelcomvc", sessaoTemp, 30);
+    }
+}
+checkCookie();
+</script>
+<!-- End of Script de Alerta de Entrega -->
 <!-- Begin Home -->
