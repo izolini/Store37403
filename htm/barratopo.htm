@@ -16,8 +16,11 @@ FCLib$.loadAsyncCSS('<PathTo file="htm/css/fastpreview.css">');
 <div class="FCToolBar HideXs">
   <div class="row">
     <div class="MainContainer">
-      <div class="col-small-3 col-medium-3 col-large-3 col-mlarge-3 col-xlarge-3 text-left">
+      <div class="col-small-2 col-medium-2 col-large-2 col-mlarge-2 col-xlarge-2 text-left">
         <a href="<StoreDomain>"><div class="FCToolBarLogo"><img alt="<NomeLoja>" src='<PathTo file="images/logotopo.png">'></div></a>
+      </div>
+      <div class="col-small-1 col-medium-1 col-large-1 col-mlarge-1 col-xlarge-1">
+        <a class=" storeCatToolBar fa fa-home" href="/"></a>
       </div>
       <div class="col-small-2 col-medium-2 col-large-2 col-mlarge-2 col-xlarge-2 text-left">
         <!-- <a class="storeCatToolBar" href="/categorias.asp?idloja=<IDLoja>">Cardápio</a> -->
@@ -112,7 +115,8 @@ FCLib$.loadAsyncCSS('<PathTo file="htm/css/fastpreview.css">');
               <ul>
                 <li><ListPathCat out="12"></li>
               </ul> -->
-            <li><a href="/c/categorias">Cardápio</a></li>
+            <li><tag-FCHeaderMenu0></li> <!-- Home -->
+            <li><a href="/c/categorias"><span class="fa fa-list-ul" style="vertical-alignment:top"></span>&nbsp;Cardápio</a></li>
             <li><tag-FCHeaderMenu1></li> <!-- Lancamentos -->
             <!-- <li><tag-FCHeaderMenu2></li> --> <!-- Promocoes -->
             <li class="header-menu-wishlist"><a href="/account.asp?idloja=<IDLoja>&wishlist=1#Wishlist" rel="nofollow"><img64 src="<BaseLoja>images/product-wishlist.svg" width="22" height="22" plain="true"><span>Lista de Desejos</span></a></li>
