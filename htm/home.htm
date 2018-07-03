@@ -58,7 +58,10 @@
 </div>
 </div>
 <!-- End Carrossel -->
-
+<!-- Apresentacao -->
+<h1 style="text-align:center; padding: 10px; font-size:1.2em; border:2px solid black">
+    <p>Marmitas de alimentos fitness balanceados por nutricionistas, sem uso de conservantes ou aditivos de qualquer natureza e congelados utilizando a técnica de ultracongelamento a vácuo, mantendo-se 100% saudáveis e saborosos. Conheça nossos pratos low carb, sem glúten e sem lactose, e siga-nos no <a href="https://www.instagram.com/qicomidadeverdade" target="_blank">Instagram</a>.</p><br>Atendemos Brasília-DF e região.</h1>
+<div class="row FullDoubleSpaceFC"></div>
 <!-- 12 produtos randomicos -->
 <div class="row">
   <div class="col-small-12 col-medium-6 col-large-4 col-mlarge-3 col-xlarge-3"><prod out="p255" em="rand"></div>
@@ -83,42 +86,4 @@
   </form>
 </div>
 <!-- Fim botao conheca nossos pratos (categorias) -->
-
-<!-- Begin Script de Alerta de Entrega -->
-<script>
-function setCookie(cname, cvalue, exdays) {
-    var d = new Date();
-    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-    var expires = "expires="+d.toUTCString();
-    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-}
-
-function getCookie(cname) {
-    var name = cname + "=";
-    var ca = document.cookie.split(';');
-    for(var i = 0; i < ca.length; i++) {
-        var c = ca[i];
-        while (c.charAt(0) == ' ') {
-            c = c.substring(1);
-        }
-        if (c.indexOf(name) == 0) {
-            return c.substring(name.length, c.length);
-        }
-    }
-    return "";
-}
-
-function checkCookie() {
-    var sessao = getCookie("saudavelcomvc");
-    var sessaoTemp = localStorage.getItem("sessao");
-    console.log(sessao);
-    console.log(sessaoTemp);
-    if (sessao == "") {
-        setTimeout('alert("ATENÇÃO\\n\\nNossos alimentos são embalados à vácuo para garantir prioridades nutricionais, aroma e sabor.\\nPor este motivo, visando manter a alta qualidade dos produtos, nossa equipe entrará em contato após sua compra para combinar data e horário exatos para entrega.\\n\\nIMPORTANTE: Entregas somente para Brasília-DF e região (CEPs 70000-000 a 73499-999).\\n\\nAsa Norte e Asa Sul\\nSudoeste e Cruzeiro\\nGuará, Águas Claras e Taguatinga\\n\\nObs: Regiões adjacentes sob consulta.")',1000);
-        setCookie("saudavelcomvc", sessaoTemp, 30);
-    }
-}
-checkCookie();
-</script>
-<!-- End of Script de Alerta de Entrega -->
 <!-- Begin Home -->
