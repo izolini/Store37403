@@ -1,3 +1,4 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <!-- Begin Banners -->
 <div id="FC-HideHomeBanners" style="display:none;">
   <link rel="stylesheet" href="/js/magictoolbox/magicslideshowv2/magicslideshow.css?cccfc=1" /><script src="/js/magictoolbox/magicslideshowv2/magicslideshow.js?cccfc=1"></script>
@@ -60,7 +61,21 @@
 <!-- End Carrossel -->
 <!-- Apresentacao -->
 <h1 style="text-align:center; padding: 10px; font-size:1.2em; border:2px solid black">
-    <p>Marmitas de alimentos fitness balanceados por nutricionistas, sem uso de conservantes ou aditivos de qualquer natureza e congelados utilizando a técnica de ultracongelamento a vácuo, mantendo-se 100% saudáveis e saborosos. Conheça nossos pratos low carb, sem glúten e sem lactose, e siga-nos no <a href="https://www.instagram.com/qicomidadeverdade" target="_blank">Instagram</a>.</p><br>Atendemos Brasília-DF e região.</h1>
+    <p>A Saudável com Você vende marmitas fitness criadas por nutricionistas, sem uso de conservantes ou aditivos de qualquer natureza e congeladas utilizando a técnica de <button id="btAbrirModal" class="btClean">ultracongelamento a vácuo</button>, mantendo-as 100% saudáveis e saborosas. Conheça nossos pratos low carb, sem glúten e sem lactose, e siga-nos no <a href="https://www.instagram.com/qicomidadeverdade" target="_blank">Instagram</a>.</p><br>Atendemos Brasília-DF e região.</h1>
+<!-- Modal ultracongelamento -->
+<div id="modal" class="hide">
+    <div class="modal-bg"></div>
+    <div class="modal-content">
+        <p><strong>Ultracongelamento</strong>- Vamos explicar para você como conservamos as refeições que produzimos:</p><br>
+        <p>Primeiro embalamos à vácuo para garantir a manutenção das propriedades nutricionais, textura e sabor dos alimentos. Como a maioria dos congeladores domésticos são pequenos, o vácuo também vai ajudar a deixar a embalagem no tamanho certo!</p><br>
+        <p>Depois usamos o ultracongelamento como forma de conservação natural: em menos de 40 minutos, exposto a uma temperatura de -30C, a refeição protegida pelo vácuo congela uniformemente.</p><br>
+        <h3>O ultracongelamento é uma técnica avançada para armazenamento de alimentos.</h3><br>
+        <p> Nossos freezers domésticos não são capazes de congelar alimentos de maneira eficiente, pois o processo de congelamento em um freezer normal é lento, permitindo que cristais de gelo se formem no produto, que ao ser descongelado perderá  nutrientes eliminados junto com a água - sem falar nos danos à textura, cor, sabor e os perigos de contaminação.</p><br>
+        <p>Sem a formação de cristais de gelo, a baixíssima temperatura atingida com o ultracongelamento impede o crescimento bacteriano e retarda a maioria das reações químicas e enzimáticas que alteram a qualidade da comida. Melhor ainda: não precisa de nenhum conservante, corante ou estabilizante, coisa que abominamos na Saudável com Você.</p><br>
+        <p>Aliado à escolha criteriosa dos insumos e à preparação e cozimento monitorado por nutricionistas, nossa embalagem garante a oferta perfeita de alimentos planejados saborosos e práticos, de altíssimo valor nutricional.</p>
+        <a class="modal-close">&#215;</a>
+    </div>
+</div>
 <div class="row FullDoubleSpaceFC"></div>
 <!-- 12 produtos randomicos -->
 <div class="row">
@@ -86,4 +101,25 @@
   </form>
 </div>
 <!-- Fim botao conheca nossos pratos (categorias) -->
+<!-- script Modal ultracongelamento -->
+<script>
+var btAbrirModal = $("#btAbrirModal");
+var modal = $("#modal");
+var modalClose = $("#modal .modal-close");
+var modalBackground = $("#modal .modal-bg");
+
+btAbrirModal.click(function () {
+    modal.fadeIn(500);
+});
+
+modalClose.click(function () {
+    modal.fadeOut(500);
+});
+
+//Caso queira que o dialogo feche ao realizar um click fora dele.
+//
+modalBackground.click(function () {
+    modal.fadeOut(500);
+});
+</script>
 <!-- Begin Home -->
