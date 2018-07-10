@@ -275,15 +275,18 @@ footer .amp-nav > a:nth-of-type(1){
 
 /* Mensagem de alerta de entregas apenas em BSB e região */
 .amp-entrega {
-  padding: 0 auto;
+  padding: 1px 0px 1px 0px;
   width: 100%;
   font-family:'Roboto',sans-serif;
   font-weight:700;
   font-size:1em;
   background-color: #f44336; /* Red */
   color: white;
-  margin-bottom: 10px;
   text-align:center
+}
+
+.amp-entrega p {
+  font-weight: 400;
 }
 
 /* Botao para ver todos os pratos no topo da tela do mobile */
